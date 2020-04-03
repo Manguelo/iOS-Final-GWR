@@ -17,6 +17,9 @@
 		C0570B292433BFF7001BC8DD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B282433BFF7001BC8DD /* DetailsViewController.swift */; };
 		C0570B2B2433C004001BC8DD /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B2A2433C004001BC8DD /* ContactViewController.swift */; };
 		C0570B2D2433C067001BC8DD /* ScheduleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B2C2433C067001BC8DD /* ScheduleStore.swift */; };
+		C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C093EF5924368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld */; };
+		C093EF5E24369E2B00131C8A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093EF5D24369E2B00131C8A /* CoreDataManager.swift */; };
+		C093EF602436B2E000131C8A /* schedule_json.json in Resources */ = {isa = PBXBuildFile; fileRef = C093EF5F2436B2DF00131C8A /* schedule_json.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		C0570B282433BFF7001BC8DD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C0570B2A2433C004001BC8DD /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C0570B2C2433C067001BC8DD /* ScheduleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleStore.swift; sourceTree = "<group>"; };
+		C093EF5A24368EDB00131C8A /* ProgramModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProgramModel.xcdatamodel; sourceTree = "<group>"; };
+		C093EF5D24369E2B00131C8A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C093EF5F2436B2DF00131C8A /* schedule_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule_json.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		C0570B0F2433BF79001BC8DD /* iOS-Final-GWR */ = {
 			isa = PBXGroup;
 			children = (
+				C093EF5F2436B2DF00131C8A /* schedule_json.json */,
+				C093EF5C24369E1500131C8A /* utils */,
 				C0570B252433BFD3001BC8DD /* Stores */,
 				C0570B242433BFC4001BC8DD /* Views */,
 				C0570B102433BF79001BC8DD /* AppDelegate.swift */,
@@ -71,6 +79,7 @@
 				C0570B192433BF7A001BC8DD /* Assets.xcassets */,
 				C0570B1B2433BF7A001BC8DD /* LaunchScreen.storyboard */,
 				C0570B1E2433BF7A001BC8DD /* Info.plist */,
+				C093EF5924368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld */,
 			);
 			path = "iOS-Final-GWR";
 			sourceTree = "<group>";
@@ -93,6 +102,14 @@
 				C0570B2C2433C067001BC8DD /* ScheduleStore.swift */,
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		C093EF5C24369E1500131C8A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				C093EF5D24369E2B00131C8A /* CoreDataManager.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C093EF602436B2E000131C8A /* schedule_json.json in Resources */,
 				C0570B1D2433BF7A001BC8DD /* LaunchScreen.storyboard in Resources */,
 				C0570B1A2433BF7A001BC8DD /* Assets.xcassets in Resources */,
 				C0570B182433BF79001BC8DD /* Main.storyboard in Resources */,
@@ -168,9 +186,11 @@
 			files = (
 				C0570B152433BF79001BC8DD /* SearchViewController.swift in Sources */,
 				C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */,
+				C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */,
 				C0570B272433BFE7001BC8DD /* FavoritesViewController.swift in Sources */,
 				C0570B132433BF79001BC8DD /* NowPlayingViewController.swift in Sources */,
 				C0570B2D2433C067001BC8DD /* ScheduleStore.swift in Sources */,
+				C093EF5E24369E2B00131C8A /* CoreDataManager.swift in Sources */,
 				C0570B292433BFF7001BC8DD /* DetailsViewController.swift in Sources */,
 				C0570B2B2433C004001BC8DD /* ContactViewController.swift in Sources */,
 			);
@@ -374,6 +394,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C093EF5924368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C093EF5A24368EDB00131C8A /* ProgramModel.xcdatamodel */,
+			);
+			currentVersion = C093EF5A24368EDB00131C8A /* ProgramModel.xcdatamodel */;
+			path = "iOS-Final-GWR.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C0570B052433BF79001BC8DD /* Project object */;
 }

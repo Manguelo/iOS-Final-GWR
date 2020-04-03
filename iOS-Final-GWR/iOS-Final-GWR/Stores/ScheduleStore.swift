@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class ScheduleStore {
     static let shared = ScheduleStore()
@@ -14,39 +15,21 @@ class ScheduleStore {
     private init() {}
     
     // Main list containg program info pulled from a json
-    var programs: [String : String] = [:]
+    var programs: [Program] = []
     
     // Use this for the search functionality
-    var filteredPrograms: [String : String] = [:]
+    var filteredPrograms: [Program] = []
     
-    
-    let itemArchiveURL: URL = {
-        let documentsDirectories =
-            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = documentsDirectories.first!
-        return documentDirectory.appendingPathComponent("schedule.archive")
-    }()
-    
-    func getSchedule() {
-        
-    }
-    
-    // save current shared object to file
-    func archiveStore() {
-        if NSKeyedArchiver.archiveRootObject(ScheduleStore.shared, toFile: itemArchiveURL.path) {
-            print ("File written")
-        } else {
-            print ("Write Failed")
+    func getSchedule() -> [String : [Dictionary<String, AnyObject>]] {
+        if let path = Bundle.main.path(forResource: "schedule_json", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                return jsonResult as! [String : [Dictionary<String, AnyObject>]]
+            } catch {
+                print("Error parsing schedule!")
+            }
         }
-    }
-    
-    // get shared object and assign values to current store
-    func unarchiveStore() {
-        if let store = NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? ScheduleStore {
-            self.programs = store.programs
-            self.filteredPrograms = store.filteredPrograms
-        } else {
-            print ("file not found")
-        }
+        return [:]
     }
 }

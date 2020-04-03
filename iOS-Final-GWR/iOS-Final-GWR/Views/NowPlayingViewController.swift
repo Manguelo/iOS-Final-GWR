@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
-class NowPlayingViewController: UIViewController {
-
+class NowPlayingViewController: UIViewController, NSFetchedResultsControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        /*
+                    Uncomment this to reset core data
+         CoreDataManager.instance.clearCoreData(entity: "Program")
+         
+         */
+        ScheduleStore.shared.programs = CoreDataManager.instance.getAllSavedPrograms()
+        if ScheduleStore.shared.programs.isEmpty {
+            let result = ScheduleStore.shared.getSchedule()
+            for item in result["programs"]! {
+                CoreDataManager.instance.saveProgram(
+                    title: item["title"] as! String,
+                    artist: item["artist"] as! String,
+                    time: item["time"] as! Int,
+                    favorite: false,
+                    timeLength: item["timeLength"] as! String)
+            }
+        }
     }
 }
+
 

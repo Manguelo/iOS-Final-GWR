@@ -1,0 +1,298 @@
+{
+  "programs": [
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 0,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Loving Word",
+      "artist": "Razz Vazquez",
+      "time": 30,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Stay The Course",
+      "artist": "Scott Gallatin",
+      "time": 100,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Bridging The Gap",
+      "artist": "Lloyd Pulley",
+      "time": 130,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Sure Foundation",
+      "artist": "David Rosales",
+      "time": 200,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Ring Of Truth",
+      "artist": "Daniel Sexton",
+      "time": 230,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Daily Walk",
+      "artist": "John Randall",
+      "time": 300,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Walk In The Light",
+      "artist": "Bil Gallatin",
+      "time": 330,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Truth For Life",
+      "artist": "Alistar Begg",
+      "time": 400,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Godsword",
+      "artist": "Ken Graves",
+      "time": 430,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Chapter And Verse",
+      "artist": "Mike Macintosh",
+      "time": 500,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Sound Truth",
+      "artist": "Malcom Wilde",
+      "time": 530,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Enduring Word",
+      "artist": "David Guzik",
+      "time": 600,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Straight From The Heart",
+      "artist": "Joe Focht",
+      "time": 630,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 700,
+      "timeLength": "15 min"
+    },
+    {
+      "title": "Just Thinking - Ravi Zacharias",
+      "artist": "Music",
+      "time": 715,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "LIVE For Jesus",
+      "artist": "104.7 WAYG",
+      "time": 730,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Loving Word",
+      "artist": "Razz Vazquez",
+      "time": 800,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Walk In The Light",
+      "artist": "Bil Gallatin",
+      "time": 830,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "The Word For Today",
+      "artist": "Chuck Smith",
+      "time": 900,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Sound Doctrine",
+      "artist": "Jeff Johnson",
+      "time": 930,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "The Faithful Word",
+      "artist": "Bob Hargraves",
+      "time": 1000,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 1030,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "According To The Scriptures",
+      "artist": "Damian Kyle",
+      "time": 1100,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Step By Step",
+      "artist": "Jim Gallagher",
+      "time": 1130,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Money Wise",
+      "artist": "Rob West & Steve Moore",
+      "time": 1200,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "In Spirit And Truth",
+      "artist": "JD Farag",
+      "time": 1230,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Sandy Adams Radio",
+      "artist": "Sandy Adams",
+      "time": 1300,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Bridging The Gap",
+      "artist": "Lloyd Pulley",
+      "time": 1330,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Science, Scripture, and Salvation Daily",
+      "artist": "ICR",
+      "time": 1400,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Sure Foundation",
+      "artist": "David Rosales",
+      "time": 1430,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "The Word For Today",
+      "artist": "Chuck Smith",
+      "time": 1500,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 1530,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Enduring Word",
+      "artist": "David Guzik",
+      "time": 1600,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Straight From The Heart",
+      "artist": "Joe Focht",
+      "time": 1630,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Chapter And Verse",
+      "artist": "Mike Macintosh",
+      "time": 1700,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Loving Word",
+      "artist": "Razz Vazquez",
+      "time": 1730,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Stay The Course",
+      "artist": "Scott Galatin",
+      "time": 1800,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Somebody Loves You",
+      "artist": "Raul Ries",
+      "time": 1830,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "A Daily Walk",
+      "artist": "John Randall",
+      "time": 1900,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "The Faithful Word",
+      "artist": "Bob Hargraves",
+      "time": 1930,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Adventures In Odessey",
+      "artist": "Focus On The Family",
+      "time": 2000,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Walk In The Light",
+      "artist": "Bil Gallatin",
+      "time": 2030,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 2100,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Bread Of Life",
+      "artist": "Geofe Breede",
+      "time": 2130,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "WAYG",
+      "artist": "Music",
+      "time": 2200,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "Simple Truths",
+      "artist": "Xavier Ries",
+      "time": 2230,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "According To The Scriptures",
+      "artist": "Damian Kyle",
+      "time": 2300,
+      "timeLength": "30 min"
+    },
+    {
+      "title": "GodSword",
+      "artist": "Ken Graves",
+      "time": 2330,
+      "timeLength": "30 min"
+    }
+  ]
+}
