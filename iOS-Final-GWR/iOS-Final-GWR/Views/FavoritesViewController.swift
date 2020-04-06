@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

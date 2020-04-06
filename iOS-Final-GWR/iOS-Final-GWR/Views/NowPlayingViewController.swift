@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NowPlayingViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class NowPlayingViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
