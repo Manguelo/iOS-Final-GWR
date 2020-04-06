@@ -18,10 +18,10 @@ class NowPlayingViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         /*
-         Uncomment this to reset core data*/
+         Uncomment this to reset core data
          CoreDataManager.instance.clearCoreData(entity: "Program")
+         */
  
-        
         ScheduleStore.shared.programs = CoreDataManager.instance.getAllSavedPrograms()
         if ScheduleStore.shared.programs.isEmpty {
             let result = ScheduleStore.shared.getSchedule()
@@ -35,6 +35,7 @@ class NowPlayingViewController: UITableViewController, NSFetchedResultsControlle
             }
             ScheduleStore.shared.programs = CoreDataManager.instance.getAllSavedPrograms()
         }
+        
         // Timer to update what's currently playing
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateNowPlaying), userInfo: nil, repeats: true)
         // Update wha's currently playing
@@ -42,7 +43,6 @@ class NowPlayingViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("\(ScheduleStore.shared.programs.count)")
         return ScheduleStore.shared.programsComingUp.count
     }
     
