@@ -3,7 +3,7 @@
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
         <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timeLength" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

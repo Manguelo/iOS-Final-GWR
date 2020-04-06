@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C024543B243B98F100C87DB8 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024543A243B98F100C87DB8 /* ProgramCell.swift */; };
 		C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B102433BF79001BC8DD /* AppDelegate.swift */; };
 		C0570B132433BF79001BC8DD /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B122433BF79001BC8DD /* NowPlayingViewController.swift */; };
 		C0570B152433BF79001BC8DD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B142433BF79001BC8DD /* SearchViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C024543A243B98F100C87DB8 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		C0570B0D2433BF79001BC8DD /* iOS-Final-GWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final-GWR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0570B102433BF79001BC8DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0570B122433BF79001BC8DD /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0245439243B98D300C87DB8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C024543A243B98F100C87DB8 /* ProgramCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C0570B042433BF79001BC8DD = {
 			isa = PBXGroup;
 			children = (
@@ -70,8 +80,9 @@
 		C0570B0F2433BF79001BC8DD /* iOS-Final-GWR */ = {
 			isa = PBXGroup;
 			children = (
+				C0245439243B98D300C87DB8 /* Cells */,
 				C093EF5F2436B2DF00131C8A /* schedule_json.json */,
-				C093EF5C24369E1500131C8A /* utils */,
+				C093EF5C24369E1500131C8A /* Utils */,
 				C0570B252433BFD3001BC8DD /* Stores */,
 				C0570B242433BFC4001BC8DD /* Views */,
 				C0570B102433BF79001BC8DD /* AppDelegate.swift */,
@@ -104,12 +115,12 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
-		C093EF5C24369E1500131C8A /* utils */ = {
+		C093EF5C24369E1500131C8A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				C093EF5D24369E2B00131C8A /* CoreDataManager.swift */,
 			);
-			path = utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */,
 				C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */,
 				C0570B272433BFE7001BC8DD /* FavoritesViewController.swift in Sources */,
+				C024543B243B98F100C87DB8 /* ProgramCell.swift in Sources */,
 				C0570B132433BF79001BC8DD /* NowPlayingViewController.swift in Sources */,
 				C0570B2D2433C067001BC8DD /* ScheduleStore.swift in Sources */,
 				C093EF5E24369E2B00131C8A /* CoreDataManager.swift in Sources */,

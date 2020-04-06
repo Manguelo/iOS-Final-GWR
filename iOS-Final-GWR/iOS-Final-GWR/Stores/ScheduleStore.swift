@@ -17,6 +17,8 @@ class ScheduleStore {
     // Main list containg program info pulled from a json
     var programs: [Program] = []
     
+    var programsComingUp: [Program] = []
+    
     // Use this for the search functionality
     var filteredPrograms: [Program] = []
     
@@ -31,5 +33,59 @@ class ScheduleStore {
             }
         }
         return [:]
+    }
+    
+    func getNowPlaying() -> Program? {
+        var program: Program!
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        
+        let curTime = (hour * 100) + minutes; // Convert to military time
+        var i = 0;
+        var displayed = false;
+        
+        while (!displayed) {
+            if programs.count == 0 {
+                return nil
+            }
+            //If it has gone through all of array
+            if (i >= programs.count - 1) {
+                displayed = true;
+                program = programs[i];
+            } else if (curTime >= programs[i].time && curTime < programs[i + 1].time) {
+                displayed = true;
+                program = programs[i];
+            } else {
+                i += 1;
+            }
+        }
+        programsComingUp = Array(programs[i + 1...programs.count - 1])
+        return program
+    }
+    
+    func militaryToStandardTime(program: Program) -> String {
+        var timeAsString = "\(program.time)"
+        
+        if timeAsString.count == 3 {
+            timeAsString.insert(":", at: timeAsString.index(timeAsString.startIndex, offsetBy: 1))
+        } else if timeAsString.count == 4 {
+            timeAsString.insert(":", at: timeAsString.index(timeAsString.startIndex, offsetBy: 2))
+        } else if program.time == 0 { // 12:00 AM
+            timeAsString = "00:00"
+        } else if program.time == 30{ // 12:30 AM
+            timeAsString = "00:30"
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        if let date = dateFormatter.date(from: timeAsString) {
+            dateFormatter.dateFormat = "h:mm a"
+            return dateFormatter.string(from: date)
+        } else {
+            return ""
+        }
     }
 }

@@ -20,7 +20,7 @@ class CoreDataManager {
     func getAllSavedPrograms() -> [Program] {
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Program")
-        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: true)]
         do {
             return try context!.fetch(fetchRequest) as! [Program]
         } catch let error as NSError {
@@ -33,7 +33,7 @@ class CoreDataManager {
         // see if program exists
         let result = getAllSavedPrograms()
         var program = result.first { (p) -> Bool in
-            p.title! + p.artist! == title + artist
+            p.title! + "\(p.time)" == title + "\(time)"
         }
         
         // if program does not exist create a new one
@@ -43,7 +43,7 @@ class CoreDataManager {
         
         program?.title = title
         program?.artist = artist
-        program?.time = Int16(time)
+        program?.time = Int64(time)
         program?.favorite = favorite
         program?.timeLength = timeLength
         

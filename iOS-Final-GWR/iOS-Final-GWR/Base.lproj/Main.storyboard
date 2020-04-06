@@ -73,7 +73,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God's Way Radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt0-m9-OzQ">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God's Way Radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pt0-m9-OzQ">
                                     <rect key="frame" x="15" y="75.5" width="352" height="30"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                     <nil key="textColor"/>
@@ -98,13 +98,63 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZnY-b1-LhD">
-                                <rect key="frame" x="0.0" y="233" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgramCell" rowHeight="76" id="ZnY-b1-LhD" customClass="ProgramCell" customModule="iOS_Final_GWR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="233" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZnY-b1-LhD" id="nQI-U3-RRF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgm-Eh-u5P">
+                                            <rect key="frame" x="106" y="16" width="260" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYN-3N-lFp">
+                                            <rect key="frame" x="106" y="40" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:45 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16B-uw-Oce">
+                                            <rect key="frame" x="16" y="18" width="75" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="Gvg-IE-o0k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E7-yD-itw">
+                                            <rect key="frame" x="16" y="38" width="75" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="6E7-yD-itw" secondAttribute="bottom" constant="19.5" id="2tM-Gg-S9G"/>
+                                        <constraint firstItem="qgm-Eh-u5P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jYN-3N-lFp" secondAttribute="trailing" id="5TI-92-0a4"/>
+                                        <constraint firstItem="jYN-3N-lFp" firstAttribute="top" secondItem="qgm-Eh-u5P" secondAttribute="bottom" constant="3" id="7sZ-0i-wRj"/>
+                                        <constraint firstItem="6E7-yD-itw" firstAttribute="height" secondItem="16B-uw-Oce" secondAttribute="height" id="A90-1R-tvW"/>
+                                        <constraint firstItem="qgm-Eh-u5P" firstAttribute="leading" secondItem="16B-uw-Oce" secondAttribute="trailing" constant="15" id="CD1-JS-kCJ"/>
+                                        <constraint firstItem="16B-uw-Oce" firstAttribute="leading" secondItem="nQI-U3-RRF" secondAttribute="leading" constant="16" id="JT6-JQ-hHB"/>
+                                        <constraint firstItem="6E7-yD-itw" firstAttribute="top" secondItem="16B-uw-Oce" secondAttribute="bottom" constant="2" id="KY2-TI-yTb"/>
+                                        <constraint firstItem="6E7-yD-itw" firstAttribute="leading" secondItem="nQI-U3-RRF" secondAttribute="leading" constant="16" id="Was-vb-5j2"/>
+                                        <constraint firstAttribute="trailing" secondItem="qgm-Eh-u5P" secondAttribute="trailing" constant="9" id="fbB-dy-XE2"/>
+                                        <constraint firstItem="16B-uw-Oce" firstAttribute="top" secondItem="nQI-U3-RRF" secondAttribute="top" constant="18" id="hYz-aL-u9l"/>
+                                        <constraint firstItem="6E7-yD-itw" firstAttribute="width" secondItem="16B-uw-Oce" secondAttribute="width" id="lXc-ni-GBY"/>
+                                        <constraint firstItem="qgm-Eh-u5P" firstAttribute="top" secondItem="nQI-U3-RRF" secondAttribute="top" constant="16" id="phx-xT-L0K"/>
+                                        <constraint firstItem="jYN-3N-lFp" firstAttribute="leading" secondItem="6E7-yD-itw" secondAttribute="trailing" constant="15" id="vCa-LW-u6b"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="jYN-3N-lFp" id="c1e-T7-GtA"/>
+                                    <outlet property="programLabel" destination="qgm-Eh-u5P" id="6mC-7M-fEy"/>
+                                    <outlet property="timeLabel" destination="16B-uw-Oce" id="56j-hP-JZq"/>
+                                    <outlet property="timeLengthLabel" destination="6E7-yD-itw" id="vIc-Uf-rn8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -115,6 +165,11 @@
                     <navigationItem key="navigationItem" title="Now Playing" id="x3l-xe-UzN">
                         <barButtonItem key="rightBarButtonItem" title="Contact" id="7QG-to-vg5"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentTime" destination="lPW-jO-OnU" id="aBp-jw-CDe"/>
+                        <outlet property="nowPlayingArtist" destination="seX-u1-7dM" id="jZc-mX-dN7"/>
+                        <outlet property="nowPlayingTitle" destination="Pt0-m9-OzQ" id="qbh-AX-jMU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wt-og-Hdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
