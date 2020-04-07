@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UITableViewController {
+class SearchViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs
     }
 }
 

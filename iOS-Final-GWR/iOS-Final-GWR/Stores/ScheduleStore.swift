@@ -17,6 +17,7 @@ class ScheduleStore {
     // Main list containg program info pulled from a json
     var programs: [Program] = []
     
+    // List of upcoming programs
     var programsComingUp: [Program] = []
     
     // Use this for the search functionality
@@ -87,5 +88,12 @@ class ScheduleStore {
         } else {
             return ""
         }
+    }
+    
+    func getCurrentTime() -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let date = Date()
+        return dateFormatter.string(from: date)
     }
 }

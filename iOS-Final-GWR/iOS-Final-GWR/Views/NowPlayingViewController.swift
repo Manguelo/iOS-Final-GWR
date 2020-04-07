@@ -64,14 +64,12 @@ class NowPlayingViewController: UITableViewController, NSFetchedResultsControlle
             nowPlayingTitle.text = current!.title
             nowPlayingArtist.text = current!.artist
         }
-        let dateFormatter : DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mm a"
-        let date = Date()
-        let dateString = dateFormatter.string(from: date)
-        currentTime.text = dateString
+        currentTime.text = ScheduleStore.shared.getCurrentTime()
         
         tableView.reloadData()
     }
+    
+    
 }
 
 
