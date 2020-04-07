@@ -263,11 +263,11 @@
             </objects>
             <point key="canvasLocation" x="1711.2" y="721.88905547226398"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="ekF-Pg-H3p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LUr-sh-APo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="6SM-rh-Rvk"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="baseline_search_white_24pt" id="6SM-rh-Rvk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mXO-D6-byx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -286,7 +286,7 @@
         <scene sceneID="5Kn-aW-psU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kOW-ES-KCb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" selectedImage="second" id="Sde-gE-PXn"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="baseline_schedule_white_24pt" id="Sde-gE-PXn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o4S-Nr-wY1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -301,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="772" y="-712.89355322338838"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="vEp-kO-qtT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2D-ul-Kgo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="K4T-D4-8Is"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="baseline_favorite_white_24pt" id="K4T-D4-8Is"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4aw-rr-gJj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -322,7 +322,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="baseline_favorite_white_24pt" width="48" height="48"/>
+        <image name="baseline_schedule_white_24pt" width="48" height="48"/>
+        <image name="baseline_search_white_24pt" width="48" height="48"/>
     </resources>
     <color key="tintColor" red="0.90354937310000005" green="0.0" blue="0.12721263250000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -21,6 +21,7 @@
 		C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C093EF5924368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld */; };
 		C093EF5E24369E2B00131C8A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093EF5D24369E2B00131C8A /* CoreDataManager.swift */; };
 		C093EF602436B2E000131C8A /* schedule_json.json in Resources */ = {isa = PBXBuildFile; fileRef = C093EF5F2436B2DF00131C8A /* schedule_json.json */; };
+		C0A463B8243D0730007F95B8 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A463B7243D0730007F95B8 /* LoremIpsum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C093EF5A24368EDB00131C8A /* ProgramModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProgramModel.xcdatamodel; sourceTree = "<group>"; };
 		C093EF5D24369E2B00131C8A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C093EF5F2436B2DF00131C8A /* schedule_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule_json.json; sourceTree = "<group>"; };
+		C0A463B7243D0730007F95B8 /* LoremIpsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				C093EF5D24369E2B00131C8A /* CoreDataManager.swift */,
+				C0A463B7243D0730007F95B8 /* LoremIpsum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				C0570B152433BF79001BC8DD /* SearchViewController.swift in Sources */,
 				C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */,
+				C0A463B8243D0730007F95B8 /* LoremIpsum.swift in Sources */,
 				C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */,
 				C0570B272433BFE7001BC8DD /* FavoritesViewController.swift in Sources */,
 				C024543B243B98F100C87DB8 /* ProgramCell.swift in Sources */,
