@@ -211,13 +211,63 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bf8-PM-PKb">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgramCell" rowHeight="76" id="smh-ag-gba" customClass="ProgramCell" customModule="iOS_Final_GWR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bf8-PM-PKb" id="N2H-Zb-K2w">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="smh-ag-gba" id="T30-dB-che">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4H-Af-su4">
+                                            <rect key="frame" x="106" y="16" width="260" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMB-2H-M7W">
+                                            <rect key="frame" x="106" y="40" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:45 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-zZ-W2E">
+                                            <rect key="frame" x="16" y="18" width="75" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="XeG-fO-RbO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cu-Px-hLS">
+                                            <rect key="frame" x="16" y="38" width="75" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fA7-zZ-W2E" firstAttribute="top" secondItem="T30-dB-che" secondAttribute="top" constant="18" id="1Qd-Md-uLK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Q4H-Af-su4" secondAttribute="trailing" constant="9" id="2XT-3f-D0b"/>
+                                        <constraint firstItem="5Cu-Px-hLS" firstAttribute="height" secondItem="fA7-zZ-W2E" secondAttribute="height" id="5UD-sw-de6"/>
+                                        <constraint firstItem="YMB-2H-M7W" firstAttribute="top" secondItem="Q4H-Af-su4" secondAttribute="bottom" constant="3" id="7S6-7k-DYP"/>
+                                        <constraint firstItem="YMB-2H-M7W" firstAttribute="leading" secondItem="5Cu-Px-hLS" secondAttribute="trailing" constant="15" id="Ena-Sm-0sM"/>
+                                        <constraint firstItem="Q4H-Af-su4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YMB-2H-M7W" secondAttribute="trailing" id="JPw-e2-8af"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Cu-Px-hLS" secondAttribute="bottom" constant="19.5" id="L14-rV-E4f"/>
+                                        <constraint firstItem="5Cu-Px-hLS" firstAttribute="top" secondItem="fA7-zZ-W2E" secondAttribute="bottom" constant="2" id="O2a-86-mqd"/>
+                                        <constraint firstItem="fA7-zZ-W2E" firstAttribute="leading" secondItem="T30-dB-che" secondAttribute="leading" constant="16" id="ghj-3b-E2b"/>
+                                        <constraint firstItem="Q4H-Af-su4" firstAttribute="top" secondItem="T30-dB-che" secondAttribute="top" constant="16" id="mtR-nP-9QO"/>
+                                        <constraint firstItem="5Cu-Px-hLS" firstAttribute="leading" secondItem="T30-dB-che" secondAttribute="leading" constant="16" id="nCn-uS-16e"/>
+                                        <constraint firstItem="5Cu-Px-hLS" firstAttribute="width" secondItem="fA7-zZ-W2E" secondAttribute="width" id="tw9-0Z-M5t"/>
+                                        <constraint firstItem="Q4H-Af-su4" firstAttribute="leading" secondItem="fA7-zZ-W2E" secondAttribute="trailing" constant="15" id="yVI-1P-DsE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="YMB-2H-M7W" id="2ad-5j-3ek"/>
+                                    <outlet property="programLabel" destination="Q4H-Af-su4" id="xG7-5U-CKS"/>
+                                    <outlet property="timeLabel" destination="fA7-zZ-W2E" id="xeV-an-klw"/>
+                                    <outlet property="timeLengthLabel" destination="5Cu-Px-hLS" id="KMD-3V-Q8b"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
