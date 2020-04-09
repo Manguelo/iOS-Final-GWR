@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81D7521F243FD52D00635F1A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D7521E243FD52D00635F1A /* SearchCell.swift */; };
 		C024543B243B98F100C87DB8 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024543A243B98F100C87DB8 /* ProgramCell.swift */; };
 		C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B102433BF79001BC8DD /* AppDelegate.swift */; };
 		C0570B132433BF79001BC8DD /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0570B122433BF79001BC8DD /* NowPlayingViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81D7521E243FD52D00635F1A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		C024543A243B98F100C87DB8 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		C0570B0D2433BF79001BC8DD /* iOS-Final-GWR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final-GWR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0570B102433BF79001BC8DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				C024543A243B98F100C87DB8 /* ProgramCell.swift */,
+				81D7521E243FD52D00635F1A /* SearchCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0570B152433BF79001BC8DD /* SearchViewController.swift in Sources */,
+				81D7521F243FD52D00635F1A /* SearchCell.swift in Sources */,
 				C0570B112433BF79001BC8DD /* AppDelegate.swift in Sources */,
 				C0A463B8243D0730007F95B8 /* LoremIpsum.swift in Sources */,
 				C093EF5B24368EDB00131C8A /* iOS-Final-GWR.xcdatamodeld in Sources */,

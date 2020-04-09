@@ -9,20 +9,21 @@
 import UIKit
 
 class SearchViewController: UITableViewController, UISearchBarDelegate {
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs
+        searchBar.delegate = self
     }
     
     var searchActive : Bool = false
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell") as! ProgramCell;
-        cell.programLabel.text = ScheduleStore.shared.filteredPrograms[indexPath.row].title
-        cell.artistLabel.text = ScheduleStore.shared.filteredPrograms[indexPath.row].artist
-        cell.timeLabel.text = ScheduleStore.shared.militaryToStandardTime(program: ScheduleStore.shared.filteredPrograms[indexPath.row])
-        cell.timeLengthLabel.text = ScheduleStore.shared.filteredPrograms[indexPath.row].timeLength
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell;
+        cell.pName.text = ScheduleStore.shared.filteredPrograms[indexPath.row].title
+        cell.pArtist.text = ScheduleStore.shared.filteredPrograms[indexPath.row].artist
         return cell
     }
     
@@ -46,11 +47,22 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
         searchActive = false;
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs.filter{
-            $0.title.contains(searchBar.text)
+            (p) -> Bool in
+            p.title?.range(of: searchBar.text ?? "") != nil
         }
+        var seen = Set<String>()
+        var unique: [Program] = []
+        for program in ScheduleStore.shared.filteredPrograms{
+            if !seen.contains(program.title!) {
+                unique.append(program)
+                seen.insert(program.title!)
+                
+            }
+        }
+        ScheduleStore.shared.filteredPrograms = unique
         if(ScheduleStore.shared.filteredPrograms.count == 0){
             searchActive = false;
         } else {
