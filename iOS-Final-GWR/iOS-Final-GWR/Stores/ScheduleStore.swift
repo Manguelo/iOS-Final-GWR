@@ -23,6 +23,9 @@ class ScheduleStore {
     // Use this for the search functionality
     var filteredPrograms: [Program] = []
     
+    // List of favorite programs
+    var favoritePrograms: [Program] = []
+    
     func getSchedule() -> [String : [Dictionary<String, AnyObject>]] {
         if let path = Bundle.main.path(forResource: "schedule_json", ofType: "json") {
             do {

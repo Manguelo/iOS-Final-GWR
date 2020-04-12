@@ -279,13 +279,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vg5-q4-D07">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesCell" rowHeight="80" id="vg5-q4-D07" customClass="FavoritesCell" customModule="iOS_Final_GWR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vg5-q4-D07" id="O7B-mL-vSu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_keyboard_arrow_right_white_24pt" translatesAutoresizingMaskIntoConstraints="NO" id="mOM-Ga-5Lb">
+                                            <rect key="frame" x="334" y="26" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="1TK-td-N92"/>
+                                                <constraint firstAttribute="height" constant="25" id="Ust-S2-ETD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQB-Sc-yfB">
+                                            <rect key="frame" x="16" y="17" width="318" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-uD-2ub">
+                                            <rect key="frame" x="16" y="41" width="318" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YQB-Sc-yfB" firstAttribute="top" secondItem="O7B-mL-vSu" secondAttribute="topMargin" constant="6" id="0CT-Ja-JZF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sWT-uD-2ub" secondAttribute="bottom" constant="7" id="372-V1-cBj"/>
+                                        <constraint firstItem="mOM-Ga-5Lb" firstAttribute="top" secondItem="O7B-mL-vSu" secondAttribute="topMargin" constant="15" id="69b-AK-XEn"/>
+                                        <constraint firstItem="mOM-Ga-5Lb" firstAttribute="leading" secondItem="YQB-Sc-yfB" secondAttribute="trailing" id="6kM-NW-Yyl"/>
+                                        <constraint firstItem="YQB-Sc-yfB" firstAttribute="leading" secondItem="O7B-mL-vSu" secondAttribute="leadingMargin" id="LAL-qf-bMN"/>
+                                        <constraint firstItem="mOM-Ga-5Lb" firstAttribute="trailing" secondItem="O7B-mL-vSu" secondAttribute="trailingMargin" id="WMC-oG-hgo"/>
+                                        <constraint firstItem="sWT-uD-2ub" firstAttribute="top" secondItem="YQB-Sc-yfB" secondAttribute="bottom" constant="3" id="bsA-Pq-Q1D"/>
+                                        <constraint firstItem="mOM-Ga-5Lb" firstAttribute="leading" secondItem="sWT-uD-2ub" secondAttribute="trailing" id="fal-rh-fmY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mOM-Ga-5Lb" secondAttribute="bottom" constant="18" id="g0a-Cd-JzC"/>
+                                        <constraint firstItem="sWT-uD-2ub" firstAttribute="leading" secondItem="O7B-mL-vSu" secondAttribute="leadingMargin" id="j8H-Cr-pwK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="sWT-uD-2ub" id="g7b-Tl-7Fv"/>
+                                    <outlet property="programLabel" destination="YQB-Sc-yfB" id="6dI-Jh-dd8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -294,8 +331,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="XbC-Gh-95b">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="eWj-7M-jGc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="HQe-gj-txT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="HQe-gj-txT">
+                            <connections>
+                                <action selector="editPressed:" destination="Pzc-Jn-CmR" id="dLJ-sQ-jsk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOo-VB-Tag" userLabel="First Responder" sceneMemberID="firstResponder"/>

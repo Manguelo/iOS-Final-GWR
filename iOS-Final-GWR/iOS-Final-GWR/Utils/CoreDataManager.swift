@@ -65,4 +65,12 @@ class CoreDataManager {
             print ("There was an error clear core data")
         }
     }
+    
+    func save() {
+        do {
+            try context!.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
 }
