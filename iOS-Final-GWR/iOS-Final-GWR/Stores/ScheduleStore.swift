@@ -26,6 +26,8 @@ class ScheduleStore {
     // List of favorite programs
     var favoritePrograms: [Program] = []
     
+    var selectedProgram: Program!
+    
     func getSchedule() -> [String : [Dictionary<String, AnyObject>]] {
         if let path = Bundle.main.path(forResource: "schedule_json", ofType: "json") {
             do {

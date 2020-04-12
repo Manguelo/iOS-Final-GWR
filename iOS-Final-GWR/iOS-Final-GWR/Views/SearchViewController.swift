@@ -15,6 +15,7 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs
+        removeDuplicates()
         searchBar.delegate = self
     }
     
@@ -49,10 +50,27 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        if searchBar.text == "" {
+            ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs
+            removeDuplicates()
+            return
+        }
+        
         ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs.filter{
             (p) -> Bool in
             p.title?.lowercased().range(of: searchBar.text?.lowercased() ?? "") != nil || ((p.artist?.lowercased().range(of: searchBar.text?.lowercased() ?? "")) != nil)
         }
+        removeDuplicates()
+        
+        if(ScheduleStore.shared.filteredPrograms.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView.reloadData()
+    }
+    
+    func removeDuplicates() {
         var seen = Set<String>()
         var unique: [Program] = []
         for program in ScheduleStore.shared.filteredPrograms{
@@ -62,13 +80,20 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
                 
             }
         }
+        unique = unique.sorted() { $0.title ?? "" < $1.title ?? "" }
         ScheduleStore.shared.filteredPrograms = unique
-        if(ScheduleStore.shared.filteredPrograms.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetail") {
+            if let index = tableView.indexPathForSelectedRow?.row {
+                ScheduleStore.shared.selectedProgram = ScheduleStore.shared.filteredPrograms[index]
+            }
         }
-        self.tableView.reloadData()
     }
     
 }

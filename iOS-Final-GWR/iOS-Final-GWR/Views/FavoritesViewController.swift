@@ -15,6 +15,7 @@ class FavoritesViewController: UITableViewController {
         ScheduleStore.shared.favoritePrograms = ScheduleStore.shared.programs.filter({ (p) -> Bool in
             p.favorite
         })
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,6 +37,18 @@ class FavoritesViewController: UITableViewController {
             ScheduleStore.shared.favoritePrograms.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             CoreDataManager.instance.save()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetail") {
+            if let index = tableView.indexPathForSelectedRow?.row {
+                ScheduleStore.shared.selectedProgram = ScheduleStore.shared.favoritePrograms[index]
+            }
         }
     }
     
