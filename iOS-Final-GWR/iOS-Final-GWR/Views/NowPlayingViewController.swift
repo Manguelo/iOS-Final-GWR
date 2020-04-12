@@ -21,7 +21,7 @@ class NowPlayingViewController: UITableViewController, NSFetchedResultsControlle
          Uncomment this to reset core data
          CoreDataManager.instance.clearCoreData(entity: "Program")
          */
- 
+        
         ScheduleStore.shared.programs = CoreDataManager.instance.getAllSavedPrograms()
         if ScheduleStore.shared.programs.isEmpty {
             let result = ScheduleStore.shared.getSchedule()

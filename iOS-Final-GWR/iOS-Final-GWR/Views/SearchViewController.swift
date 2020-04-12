@@ -51,7 +51,7 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
         
         ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs.filter{
             (p) -> Bool in
-            p.title?.lowercased().range(of: searchBar.text?.lowercased() ?? "") != nil
+            p.title?.lowercased().range(of: searchBar.text?.lowercased() ?? "") != nil || ((p.artist?.lowercased().range(of: searchBar.text?.lowercased() ?? "")) != nil)
         }
         var seen = Set<String>()
         var unique: [Program] = []
