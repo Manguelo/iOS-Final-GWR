@@ -50,7 +50,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hir-Na-Zq2">
                                             <rect key="frame" x="15" y="0.0" width="360" height="40"/>
-                                            <color key="backgroundColor" red="0.82336288690000003" green="0.91190183160000005" blue="0.7999862432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.82336264849999996" green="0.90791064499999996" blue="0.79998683930000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="WfC-Yu-hpH"/>
                                             </constraints>
@@ -164,7 +164,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Now Playing" id="x3l-xe-UzN">
-                        <barButtonItem key="rightBarButtonItem" title="Contact" id="7QG-to-vg5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Contact" id="7QG-to-vg5">
+                            <connections>
+                                <segue destination="UfR-PI-7Zx" kind="show" id="zqH-5m-7eh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentTime" destination="lPW-jO-OnU" id="aBp-jw-CDe"/>
@@ -175,6 +179,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wt-og-Hdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1711.2" y="-712.89355322338838"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="63Q-TP-S1K">
+            <objects>
+                <viewController id="UfR-PI-7Zx" customClass="ContactViewController" customModule="iOS_Final_GWR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="caN-hh-375">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="512x512 Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-bH-lNg">
+                                <rect key="frame" x="-69" y="97" width="513" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="azj-Or-Gf6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-nH-c04">
+                                <rect key="frame" x="13" y="368" width="349" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSv-Om-xk2">
+                                        <rect key="frame" x="0.0" y="0.0" width="349" height="39"/>
+                                        <color key="backgroundColor" red="0.82336264849999996" green="0.90791064499999996" blue="0.79998683930000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="(786) 313 - 3115"/>
+                                        <connections>
+                                            <action selector="clickedPhone:" destination="UfR-PI-7Zx" eventType="touchUpInside" id="TWQ-E5-sPw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-DE-STP">
+                                        <rect key="frame" x="0.0" y="67" width="349" height="39"/>
+                                        <color key="backgroundColor" red="0.82336264849999996" green="0.90791064499999996" blue="0.79998683930000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="manager@godswayradio.com"/>
+                                        <connections>
+                                            <action selector="clickedEmail:" destination="UfR-PI-7Zx" eventType="touchUpInside" id="4lT-sG-cHg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="E54-3A-Snh">
+                                        <rect key="frame" x="0.0" y="134" width="349" height="39"/>
+                                        <color key="backgroundColor" red="0.82336264849999996" green="0.90791064499999996" blue="0.79998683930000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="11975 SW 2 Street Miami, FL 33184 "/>
+                                        <connections>
+                                            <action selector="clickedAddress:" destination="UfR-PI-7Zx" eventType="touchUpInside" id="Clb-iW-SOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3aF-bH-lNg" firstAttribute="top" secondItem="hF9-kN-c18" secondAttribute="top" constant="33" id="01c-ck-EEb"/>
+                            <constraint firstItem="3aF-bH-lNg" firstAttribute="centerX" secondItem="caN-hh-375" secondAttribute="centerX" id="59a-fr-vDb"/>
+                            <constraint firstItem="3aF-bH-lNg" firstAttribute="centerX" secondItem="pHX-nH-c04" secondAttribute="centerX" id="I2d-s7-0Ov"/>
+                            <constraint firstItem="pHX-nH-c04" firstAttribute="top" secondItem="3aF-bH-lNg" secondAttribute="bottom" constant="59" id="ZhB-Y4-zHh"/>
+                            <constraint firstItem="pHX-nH-c04" firstAttribute="leading" secondItem="hF9-kN-c18" secondAttribute="leading" constant="13" id="lZR-IN-GAx"/>
+                            <constraint firstItem="3aF-bH-lNg" firstAttribute="leading" secondItem="caN-hh-375" secondAttribute="leadingMargin" constant="-85" id="tG6-Fn-RFC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hF9-kN-c18"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressButton" destination="E54-3A-Snh" id="Jfh-sX-Nav"/>
+                        <outlet property="emailButton" destination="O8s-DE-STP" id="GK8-lE-21j"/>
+                        <outlet property="phoneButton" destination="hSv-Om-xk2" id="Uzs-id-cDO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdA-wW-W9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656.8000000000002" y="-713.79310344827593"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -533,6 +605,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="512x512 Logo" width="512" height="512"/>
         <image name="baseline_favorite_white_24pt" width="48" height="48"/>
         <image name="baseline_keyboard_arrow_right_white_24pt" width="48" height="48"/>
         <image name="baseline_schedule_white_24pt" width="48" height="48"/>
