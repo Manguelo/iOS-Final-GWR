@@ -96,5 +96,13 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            searchBar.text = ""
+            ScheduleStore.shared.filteredPrograms = ScheduleStore.shared.programs
+            removeDuplicates()
+            tableView.reloadData()
+        }
+    }
 }
 
